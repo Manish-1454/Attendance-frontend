@@ -13,6 +13,14 @@ const layout=()=>{
                     <MaterialIcons name="home" size={size} color={color}/>)
             }}
             />
+            <Tabs.Screen 
+      name="SalaryStatus"
+      options={{
+        title:"Salary",
+        tabBarIcon:({color,size})=>(
+            <MaterialIcons name="schedule" size={size} color={color} />
+        ),
+      }} />
             
             <Tabs.Screen
             name="new"

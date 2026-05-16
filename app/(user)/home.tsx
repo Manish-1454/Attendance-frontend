@@ -88,11 +88,7 @@ export default function DashboardScreen() {
           📅 View My Attendance History
         </Text>
       </View>
-      <View style={styles.attendanceBtn}>
-        <Text style={styles.link3} onPress={downloadMyReport}>
-          📥 Download My Report
-        </Text>
-      </View>
+      
     </ScrollView>
   );
 }
