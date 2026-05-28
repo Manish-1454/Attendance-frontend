@@ -132,7 +132,7 @@ export default function EditableProfile() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 20, alignItems: "center", backgroundColor: "#F8F9FA", paddingBottom: 50 },
+  container: { padding: 20, alignItems: "center", backgroundColor: "#F8F9FA", paddingBottom: 50, marginTop:80},
   loading: { textAlign: "center", marginTop: 100, fontSize: 18 },
   avatar: { width: 120, height: 120, borderRadius: 60, borderWidth: 2, borderColor: "#007AFF", marginBottom: 10 },
   changeImageText: { color: "#007AFF", fontWeight: "600", marginBottom: 20, textAlign: "center" },

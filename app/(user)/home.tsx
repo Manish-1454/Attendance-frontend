@@ -83,11 +83,7 @@ export default function DashboardScreen() {
       </View>
 
       {/* Action Buttons */}
-      <View style={styles.attendanceBtn}>
-        <Text style={styles.link2} onPress={() => router.push('/tabs/attendancehistory')}>
-          📅 View My Attendance History
-        </Text>
-      </View>
+   
       
     </ScrollView>
   );

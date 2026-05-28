@@ -179,12 +179,12 @@ const downloadPdf = async () => {
         keyExtractor={(item) => item.name}
         ListHeaderComponent={() => (
           <View style={[styles.row, styles.headerRow]}>
-            <Text style={[styles.cell, styles.headerCell]}>Name</Text>
-            <Text style={[styles.cell, styles.headerCell]}>Days</Text>
-            <Text style={[styles.cell, styles.headerCell]}>Salary</Text>
-            <Text style={[styles.cell, styles.headerCell]}>Advance</Text>
+            <Text style={[styles.cell, styles.headerCell]}>பெயர்</Text>
+            <Text style={[styles.cell, styles.headerCell]}>நாள்</Text>
+            <Text style={[styles.cell, styles.headerCell]}>சம்பளம்</Text>
+            <Text style={[styles.cell, styles.headerCell]}>அட்வான்ஸ்</Text>
             <Text style={[styles.cell, styles.headerCell]}>OT</Text>
-            <Text style={[styles.cell, styles.headerCell]}>Total</Text>
+            <Text style={[styles.cell, styles.headerCell]}>மீதி</Text>
           </View>
         )}
         renderItem={({ item }) => (

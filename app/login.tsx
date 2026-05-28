@@ -13,7 +13,8 @@ export default function LoginScreen() {
   const [showSetLoginCard, setShowLoginCard] = useState(false);
   const [loading,setloading]=useState(false);
   const router = useRouter();
-
+  const[phonenumber,setphonenumber]=useState('');
+const [err,seterr]=useState( '')
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLoginCard(true);
@@ -23,7 +24,7 @@ export default function LoginScreen() {
 
  const handleLogin = async () => {
   // Validate inputs
-  if (!name.trim() || !password.trim()) {
+  if (!phonenumber.trim() || !password.trim()) {
     setshowAlert(true);
     return;
   }
@@ -33,7 +34,7 @@ export default function LoginScreen() {
     setloading(true);
 
     const res = await api.post('/auth/login', {
-      name: name.trim(),
+      phonenumber: phonenumber.trim(),
       password: password.trim(),
     });
 
@@ -55,12 +56,20 @@ export default function LoginScreen() {
       setshowAlert(true);
     }
   } catch (err: any) {
-    console.error(
-      'Login Error:',
-      err?.response?.data || err?.message || err
-    );
-    setshowAlert(true);
-  } finally {
+  console.error(
+    'Login Error:',
+    err?.response?.data || err?.message || err
+  );
+
+  seterr(
+    err?.response?.data?.message ||
+    err?.message ||
+    'Something went wrong'
+  );
+
+  setshowAlert(true);
+}
+   finally {
     // Always stop loading
     setloading(false);
   }
@@ -78,7 +87,7 @@ export default function LoginScreen() {
       {showAlert && (
         <View style={styles.alertBox}>
           <Text style={styles.alertTitle}>Error</Text>
-          <Text style={styles.alertMessage}>Login Failed</Text>
+          <Text style={styles.alertMessage}>{err}</Text>
           <TouchableOpacity onPress={() => setshowAlert(false)} style={styles.alertButton}>
             <Text style={styles.alertButtonText}>OK</Text>
           </TouchableOpacity>
@@ -99,9 +108,9 @@ export default function LoginScreen() {
           {/* Login Card */}
           <View style={styles.loginCard}>
             <TextInput
-              placeholder="Enter your username"
-              value={name}
-              onChangeText={setname}
+              placeholder="Enter your Phonenumber"
+              value={phonenumber}
+              onChangeText={setphonenumber}
               style={styles.input}
               autoCapitalize="none"
             />
