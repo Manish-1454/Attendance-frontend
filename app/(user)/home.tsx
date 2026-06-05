@@ -7,6 +7,7 @@ import { useFocusEffect } from '@react-navigation/native';
 
 export default function DashboardScreen() {
   const [todaySummary, setTodaySummary] = useState({});
+
   const [weekSummary, setWeekSummary] = useState({});
   const [refreshing, setRefreshing] = useState(false);
   const router = useRouter();
