@@ -27,6 +27,8 @@ export default function DashboardScreen() {
 
       setTodaySummary(todayRes.data || {});
       setWeekSummary(weekRes.data || {});
+      console.log(todaySummary);
+      
     } catch (err) {
       console.error('Dashboard load error', err);
     }

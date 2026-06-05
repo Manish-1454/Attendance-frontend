@@ -2,7 +2,7 @@
   "expo": {
     "name": "JPCON",
     "slug": "Frontend",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "frontend",
@@ -12,7 +12,6 @@
       "supportsTablet": true
     },
     "android": {
-  
       "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
@@ -46,6 +45,12 @@
       "eas": {
         "projectId": "7f003eea-7971-4d90-881d-4ed7495a6d59"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/7f003eea-7971-4d90-881d-4ed7495a6d59"
     }
   }
 }
