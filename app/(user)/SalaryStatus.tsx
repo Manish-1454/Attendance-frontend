@@ -133,7 +133,7 @@ const SalaryStatus = () => {
         <Text style={styles.label}>Total Advance(அட்வான்ஸ்)</Text>
         <Text style={styles.value}>₹ {datas.totalAdvance}</Text>
         <Text style={styles.label}>Total OT</Text>
-        <Text style={styles.value}>₹ {datas.totalAdvance}</Text>
+        <Text style={styles.value}>₹ {datas.totalot}</Text>
 
         <Text style={styles.label}>Balance Salary(மீதி)</Text>
         <Text style={styles.balance}>₹ {datas.balanceSalary}</Text>
