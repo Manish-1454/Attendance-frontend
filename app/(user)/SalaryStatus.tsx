@@ -24,7 +24,7 @@ const SalaryStatus = () => {
       // GET /attendance/salary-status/:userId
       const res = await api.get(`/attendance/salary-status/${userId}`);
       setDatas(res.data);
-      console.log(res.data);
+     
       
     } catch (error) {
       console.log('Salary fetch error:', error);
@@ -117,7 +117,7 @@ const SalaryStatus = () => {
 
   return (
     <View style={styles.container}>
-     <View style={styles.attendanceBtn}> <Text style={styles.link2} > 📅 View My Attendance History </Text> </View>
+ 
 
       <View style={styles.card}>
         <Text style={styles.label}>Present Days
@@ -128,12 +128,12 @@ const SalaryStatus = () => {
      
 
         <Text style={styles.label}>Total Salary(சம்பளம்)</Text>
-        <Text style={styles.value}>₹ {datas.grossSalary}</Text>
+        <Text style={styles.value}>{datas.grossSalary}</Text>
 
         <Text style={styles.label}>Total Advance(அட்வான்ஸ்)</Text>
-        <Text style={styles.value}>₹ {datas.totalAdvance}</Text>
+        <Text style={styles.value && styles.advance}> {datas.totalAdvance}</Text>
         <Text style={styles.label}>Total OT</Text>
-        <Text style={styles.value}>₹ {datas.totalot}</Text>
+        <Text style={styles.value}> {datas.totalot}</Text>
 
         <Text style={styles.label}>Balance Salary(மீதி)</Text>
         <Text style={styles.balance}>₹ {datas.balanceSalary}</Text>
@@ -192,6 +192,12 @@ const styles = StyleSheet.create({
     marginTop: 12,
     fontWeight: '600',
   },
+  advance:{
+    color:"red",
+    fontSize:22,
+     fontWeight: 'bold',
+
+  },
   value: {
     fontSize: 22,
     fontWeight: 'bold',
@@ -213,5 +219,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   downloadText: { color: "#fff", fontSize: 16, fontWeight: "600" },
-  attendanceBtn: { marginBottom: 20, alignItems: 'center' }, link1: { margin: 5, fontWeight: 'bold', borderRadius: 10, padding: 10, backgroundColor: 'red', color: 'white', fontSize: 15 }, link2: { backgroundColor: 'green', color: 'white', fontWeight: 'bold', padding: 10, borderRadius: 10, width: '90%', textAlign: 'center' },
+
+  link1: { margin: 5, fontWeight: 'bold', borderRadius: 10, padding: 10, backgroundColor: 'red', color: 'white', fontSize: 15 }, link2: { backgroundColor: 'green', color: 'white', fontWeight: 'bold', padding: 10, borderRadius: 10, width: '90%', textAlign: 'center' },
+
 });

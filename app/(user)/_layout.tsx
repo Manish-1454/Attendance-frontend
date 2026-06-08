@@ -30,6 +30,14 @@ const layout=()=>{
                     <MaterialIcons name="report" size={size} color={color}/>)
             }}
             />
+            <Tabs.Screen
+            name="profileScreen"
+            options={{
+                title:"Profile",
+                tabBarIcon:({size,color})=>(
+                    <MaterialIcons name="account-circle" size={size} color={color}/>)
+            }}
+            />
             
         
             
