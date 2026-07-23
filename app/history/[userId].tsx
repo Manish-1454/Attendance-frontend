@@ -1,6 +1,6 @@
 import { useLocalSearchParams } from "expo-router";
 import { useState, useEffect,useCallback } from "react";
-import { View, Text, FlatList, StyleSheet,Image, Alert,Button,TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, FlatList, StyleSheet,Image, Alert,Button,TouchableOpacity, ScrollView ,ActivityIndicator} from 'react-native';
 import React from 'react';
 import api from "../../services/api";
 import moment from 'moment';
